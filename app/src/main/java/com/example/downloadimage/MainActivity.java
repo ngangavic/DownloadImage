@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Picasso.get().load(getUrl()).into(imageView);
+                Picasso.get().load(getUrl()).transform(new CircleTransformation()).into(imageView);
             }
         });
     }
